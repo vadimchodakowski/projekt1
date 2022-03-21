@@ -3,8 +3,7 @@ pipeline {
     stages { 
         stage('build') {
             steps {
-                sh "chmode 777"
-                sh "ls -la"
+               sh "ls -la"
             }
         }
         stage('deploy') {
