@@ -1,12 +1,12 @@
 pipeline {
-    agent {label 'ubuntu jenkins'}
+    agent {label 'jenkins'}
     stages { 
         stage('build') {
             steps {
                sh "ls -la"
             }
         }
-        stage('deploy') {
+                stage('deploy') {
             steps {
                 sh "pwd"
             }
