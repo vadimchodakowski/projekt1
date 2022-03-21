@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'projekt3'}
+    agent {label 'ubuntu jenkins'}
     stages { 
         stage('build') {
             steps {
