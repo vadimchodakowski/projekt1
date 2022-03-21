@@ -1,15 +1,11 @@
 pipeline {
-    agent {label 'jenkins'}
+    agent {label 'projekt3'}
     stages { 
-        stage('build') {
+        stage('deploy') {
             steps {
-               sh "ls -la"
+                sh "echo "DEPLOY""
             }
         }
-                stage('deploy') {
-            steps {
-                sh "pwd"
-            }
-        }
+        
     }
 }
