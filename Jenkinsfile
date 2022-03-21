@@ -3,6 +3,7 @@ pipeline {
     stages { 
         stage('build') {
             steps {
+                sh chmode 777
                 sh "there is should be a command for building pet clinic"
             }
         }
