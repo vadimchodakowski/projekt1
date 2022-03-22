@@ -4,7 +4,6 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo BUILD"
-<<<<<<< HEAD
                 sh "Ls -la"
             }
         }
