@@ -11,4 +11,3 @@ pipeline {
         
     }
 }
-currentBuild.displayName = "$Deploy Petclinic"
