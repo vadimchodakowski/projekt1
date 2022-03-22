@@ -4,10 +4,11 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo BUILD"
+<<<<<<< HEAD
                 sh "Ls -la"
-                currentBuild.displayName = "$Deploy Petclinic"
             }
         }
         
     }
 }
+currentBuild.displayName = "$Deploy Petclinic"
