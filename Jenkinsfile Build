@@ -5,6 +5,7 @@ pipeline {
             steps {
                 sh "echo BUILD"
                 sh "Ls -la"
+                currentBuild.displayName = "$Deploy Petclinic"
             }
         }
         
