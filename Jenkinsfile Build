@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo BUILD"
-                build job: 'Deploy Petclinic'
+                job = build job: 'Deploy Petclinic'
             }
         }
         
