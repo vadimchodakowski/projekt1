@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "echo BUILD"
-                build job: = '<Deploy Petclinic>' , propagate: true, wait: true
+                build job: 'Deploy Petclinic'
             }
         }
         
