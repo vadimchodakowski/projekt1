@@ -4,13 +4,13 @@ pipeline {
         stage('build') {
             steps {
                sh "ls -la"
-                sh echo "Hello!!!)))"
+                sh "Hello!!!)))"
                             }
         }
                 stage('deploy') {
             steps {
                 sh "pwd"
-                sh echo "Good buy ((("
+                sh "Good buy ((("
             }
         }
     }
