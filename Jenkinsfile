@@ -5,8 +5,7 @@ pipeline {
             steps {
                sh "ls -la"
                 sh "Hello!!!)))"
-                triggers { pollSCM('*****') }
-            }
+                            }
         }
                 stage('deploy') {
             steps {
