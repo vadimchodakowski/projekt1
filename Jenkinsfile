@@ -3,16 +3,14 @@ pipeline {
     stages { 
         stage('build') {
             steps {
-                sh 'docker build'
+                sh 'docker build .'
                sh "ls -la"
-                sh "Hello!!!)))"
-                            }
-        }
-                stage('deploy') {
-            steps {
-                sh "pwd"
-                sh "Good buy ((("
             }
-        }
+       }
+        // stage('deploy') {
+        //     steps {
+        //          sh "pwd"
+        //     }
+        // }
     }
 }
