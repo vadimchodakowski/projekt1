@@ -1,10 +1,11 @@
 pipeline {
-    agent {label 'projekt4'}
+    agent any
     stages { 
         stage('build') {
             steps {
                 sh 'docker build .'
-               sh "ls -la"
+                sh "ls -la"
+                echo "huj"
             }
        }
         // stage('deploy') {
