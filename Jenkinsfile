@@ -6,9 +6,14 @@ pipeline {
                 sh "Ls-la"
                 sh "git clone https://github.com/spring-projects/spring-petclinic.git"
                 sh "ls -la"
-                sh "apt-get update"
-                sh "apt-get install -qy maven"
+                sh "cd spring-petclinic"
+                sh "./mvnw package"
+                sh "java -jar target/*.jar"
                 sh echo "ls -la"
+                sh "docker build -t CI:CITAG"
+                sh "docker tag CI:CITAG wadim77/13.04:petclinic
+                sh "docker push wadim77/13.04:petclinic"
+                sh "Ls -la"
                 }
        }
         // stage('deploy') {
