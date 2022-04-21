@@ -7,8 +7,7 @@ pipeline {
                 sh "apt-get update"
                 sh "apt-get install -qy maven"
                 sh echo "ls -la"
-                
-            }
+                }
        }
         // stage('deploy') {
         //     steps {
@@ -17,3 +16,4 @@ pipeline {
         // }
     }
 }
+
