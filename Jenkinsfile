@@ -14,7 +14,7 @@ pipeline {
 //                 sh "docker build 13.04:petclinic ."
 //                 sh "docker tag 13.04:petclinic wadim77/13.04:petclinic"
 //                 sh "docker push wadim77/13.04:petclinic"
-                sh "ls -la"
+//                 sh "ls -la"
                   }
                        }
            }
