@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update && \
     docker build 13.04:petclinic. && \
-    docker tag 13.04:petclinic wadim77/13.04:petclinic
+    docker tag 13.04:petclinic wadim77/13.04:petclinic && \
     docker push wadim77/13.04:petclinic
 
 EXPOSE 8080
