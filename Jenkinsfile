@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh "pwd"
-                sh "ls-la"
+                sh "ls -la"
                 sh "git clone https://github.com/spring-projects/spring-petclinic.git"
                 sh "ls -la"
                 sh "cd spring-petclinic"
