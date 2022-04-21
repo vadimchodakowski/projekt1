@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "pwd"
                 sh "ls -la"
-                sh "git clone https://github.com/spring-projects/spring-petclinic.git"
+                sh "git clone https://github.com/vadimchodakowski/projekt1"
                 sh "ls -la"
                 sh "cd spring-petclinic"
                 sh "./mvnw package"
