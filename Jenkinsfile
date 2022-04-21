@@ -3,7 +3,8 @@ pipeline {
     stages { 
         stage('build') {
             steps {
-                sh "Ls-la"
+                sh "pwd"
+                sh "ls-la"
                 sh "git clone https://github.com/spring-projects/spring-petclinic.git"
                 sh "ls -la"
                 sh "cd spring-petclinic"
@@ -12,14 +13,9 @@ pipeline {
                 sh "docker build 13.04:petclinic."
                 sh "docker tag 13.04:petclinic wadim77/13.04:petclinic"
                 sh "docker push wadim77/13.04:petclinic"
-                sh "Ls -la"
-                }
-       }
-        // stage('deploy') {
-        //     steps {
-        //          sh "pwd"
-        //     }
-        // }
-    }
+                sh "ls -la"
+                  }
+                       }
+           }
 }
 
