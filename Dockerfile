@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN apt-get update && \
     
 
-EXPOSE 8888
+EXPOSE 8080
 
 CMD ["sh"]
 
