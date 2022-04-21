@@ -10,7 +10,7 @@ pipeline {
                 sh "cd spring-petclinic"
                 sh "chmod 777 mvnw"
                 sh "./mvnw package"
-                sh "java -jar target/*.jar"
+//                 sh "java -jar target/*.jar"
                 sh "docker build 13.04:petclinic ."
                 sh "docker tag 13.04:petclinic wadim77/13.04:petclinic"
 //                 sh "docker push wadim77/13.04:petclinic"
