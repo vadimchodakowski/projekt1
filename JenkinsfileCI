@@ -3,20 +3,21 @@ pipeline {
     stages { 
         stage('build') {
             steps {
-                sh "rm -rf ./projekt1"
-                sh "git clone https://github.com/vadimchodakowski/projekt1.git"
-                sh "ls -la"
-                dir("/var/jenkins_home/workspace/test-job/projekt1/spring-petclinic-main") {
                 sh "pwd"
-                sh "ls -la"
-                sh "pwd"
-                sh "ls -la"
-                sh "chmod 777 mvnw"
-                sh "./mvnw package"
-                sh "docker build 13.04:petclinic ."
-                sh "docker tag 13.04:petclinic wadim77/13.04:petclinic"
-                sh "docker push wadim77/13.04:petclinic"
-                sh "ls -la"
+                // sh "rm -rf ./projekt1"
+                // sh "git clone https://github.com/vadimchodakowski/projekt1.git"
+                // sh "ls -la"
+                // dir("/var/jenkins_home/workspace/test-job/projekt1/spring-petclinic-main") {
+                // sh "pwd"
+                // sh "ls -la"
+                // sh "pwd"
+                // sh "ls -la"
+                // sh "chmod 777 mvnw"
+                // sh "./mvnw package"
+                // sh "docker build 13.04:petclinic ."
+                // sh "docker tag 13.04:petclinic wadim77/13.04:petclinic"
+                // sh "docker push wadim77/13.04:petclinic"
+                // sh "ls -la"
                     }
                   }
                        }
