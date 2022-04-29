@@ -1,15 +1,4 @@
-FROM ubuntu:18.04
-
-RUN apt-get update && \
-    
-
-EXPOSE 8080
-
-CMD ["sh"]
-
-
-# RUN useradd jenkins && echo jenkins | passwd jenkins --stdin
-#     echo "jenkins" | password jenkins --stdin && \
-#     mkdir /home/jenkins/.ssh && \
-#     chmod 700 /home/jenkinsremote_user/.ssh
-    
+FROM openjdk:8-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
