@@ -8,10 +8,7 @@ pipeline {
                         sh "rm -rf ./projekt1"
                         sh "git clone https://github.com/vadimchodakowski/projekt1.git"
                         dir('projekt1') {
-                        sh "ls -la"
-                        sh "pwd"
-                        sh "ls -la"
-                        sh "pwd"
+                        sh "ls -la && pwd"
                         sh "chmod 777 mvnw"
                         sh "./mvnw package"
                         sh "ls -la"
@@ -22,7 +19,9 @@ pipeline {
         stage('Build Image') {
             steps {
                 script {
-                        // sh "chmod 777 /var/run/docker.sock"
+                        withCredentials([usernamePassword(credentialsId: 'dockercredantials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                        sh 'docker login -u $USERNAME -p $PASSWORD'
+                        }
                         dir('projekt1') {
                         sh "docker images"
                         sh "docker build -t 13.04:petclinic ."
