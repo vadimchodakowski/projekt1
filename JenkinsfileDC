@@ -4,6 +4,8 @@ pipeline {
          stage('Run container with Petclinic') {
             steps {
                 script {
+                    def findContainer = sh(script: "docker ps | grep wadim77* | cut -b 1-13", returnStdout: true).trim()
+                        sh "docker container stop ${findContainer} && docker container rm ${findContainer}"
                         sh "docker run -d -p 8081:8080 wadim77/13.04:petclinic"
                 }
             }
